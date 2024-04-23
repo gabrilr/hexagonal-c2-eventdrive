@@ -10,7 +10,7 @@ export class AddPagoUseCase{
         readonly notificationHelpers:NotificationHelpers
     ){}
     
-    async run(id_tarjeta:number,beneficiario:string,noTarjeta:string,cvv:string):Promise<Pago | null>{
+    async run(id_tarjeta:number,beneficiario:string,noTarjeta:number,cvv:string):Promise<Pago | null>{
         try {
             const EncryCVV = await this.encryCVVHelper.encodeCVV(cvv);
             const PagoProcesado = await this.pagoRepository.addPago(id_tarjeta,beneficiario,noTarjeta,EncryCVV);

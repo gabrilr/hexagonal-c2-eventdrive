@@ -4,7 +4,7 @@ import PagoModel from "./Model/pago";
 
 
 export class SqlPagoRepositorio implements PagoRepository{
-    async addPago(id_tarjeta: number, beneficiario: string, noTarjeta: string,cvv: string): Promise<Pago | null> {
+    async addPago(id_tarjeta: number, beneficiario: string, noTarjeta: number,cvv: string): Promise<Pago | null> {
         try {
             const pagoRealizado = await PagoModel.create({id_tarjeta,beneficiario,noTarjeta,cvv});
             return new Pago(pagoRealizado.id_tarjeta, pagoRealizado.beneficiario, pagoRealizado.noTarjeta,pagoRealizado.cvv);

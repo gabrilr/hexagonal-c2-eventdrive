@@ -18,10 +18,10 @@ class PagoModel extends Model{
     public beneficiario!:string
 
     @Column({
-        type:DataType.STRING,
+        type:DataType.INTEGER,
         allowNull:false
     })
-    public noTarjeta!:string
+    public noTarjeta!:number
 
     @Column({
         type:DataType.STRING,

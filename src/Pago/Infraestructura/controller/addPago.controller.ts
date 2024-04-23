@@ -21,7 +21,7 @@ export class AddPagoController{
                         noTarjeta:pagoProcesado.noTarjeta,
                         cvv:pagoProcesado.cvv
                     },
-                    message:"Tarjeta agregada correctamente."
+                    message:"Tarjeta aceptada"
                 })
             }else{
                 return res.status(400).send({

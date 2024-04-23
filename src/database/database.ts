@@ -8,7 +8,7 @@ export const sequelize = new Sequelize({
     dialect:"mysql",
     database:process.env.DB,
     username: process.env.USER, 
-    password: process.env.PASSWORD,
+    password: process.env.DBPSSW,
     host:process.env.HOST,
     port:3306,
     models:[Pago]
